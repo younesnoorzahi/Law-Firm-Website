@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Johnson & Associates</title>
+  <meta name="description" content="Contact our team of legal professionals for a consultation or to discuss your legal needs.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Additional styles for contact page */
+    .contact-form-section {
+      padding: 60px 0;
+    }
+    
+    .contact-form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: var(--white);
+      border-radius: 8px;
+      box-shadow: var(--shadow-lg);
+      padding: 40px;
+    }
+    
+    .contact-form h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .form-col {
+      flex: 1;
+    }
+    
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--gray-light);
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+    
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .error {
+      border-color: #e53e3e;
+    }
+    
+    .map-container {
+      height: 450px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    
+    @media (max-width: 768px) {
+      .form-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .contact-form-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header/Navigation -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <i class="fas fa-balance-scale"></i>
+            <span>Johnson & Associates</span>
+          </a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="practice-areas.html">Practice Areas</a></li>
+            <li><a href="attorneys.html">Attorneys</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+        </nav>
+        
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-close">
+      <i class="fas fa-times"></i>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="practice-areas.html">Practice Areas</a></li>
+      <li><a href="attorneys.html">Attorneys</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+  </div>
+
+  <!-- Page Header -->
+  <section class="hero" style="height: 300px;">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team of legal professionals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="contact-info section">
+    <div class="container">
+      <div class="contact-info-grid">
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Call Us</h3>
+          <p>(555) 123-4567</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email Us</h3>
+          <p>info@lawfirm.com</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Visit Us</h3>
+          <p>
+            123 Legal Street, Suite 500<br>
+            New York, NY 10001
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Office Hours</h3>
+          <p>
+            Monday - Friday: 9am - 6pm<br>
+            Saturday: By appointment
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form-section bg-light">
+    <div class="container">
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <h2>Send Us a Message</h2>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-col">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+              </div>
+              <div class="form-col">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-col">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+              </div>
+              <div class="form-col">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="practiceArea">Practice Area</label>
+              <select id="practiceArea" name="practiceArea">
+                <option value="" selected disabled>Select a practice area</option>
+                <option value="corporate">Corporate Law</option>
+                <option value="litigation">Litigation</option>
+                <option value="real-estate">Real Estate</option>
+                <option value="family">Family Law</option>
+                <option value="estate">Estate Planning</option>
+                <option value="employment">Employment Law</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Please describe your legal needs..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="section">
+    <div class="container">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256349542!2d-73.98823492404045!3d40.75067083440245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9aeb1c6b5%3A0x35b1cfbc89a6097f!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1683056595886!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="logo">
+            <i class="fas fa-balance-scale"></i>
+            <span>Johnson & Associates</span>
+          </div>
+          <p>Dedicated legal professionals committed to providing exceptional service and achieving the best possible outcomes for our clients.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Practice Areas</h3>
+          <ul>
+            <li><a href="practice-areas.html#corporate-law">Corporate Law</a></li>
+            <li><a href="practice-areas.html#litigation">Litigation</a></li>
+            <li><a href="practice-areas.html#real-estate">Real Estate</a></li>
+            <li><a href="practice-areas.html#family-law">Family Law</a></li>
+            <li><a href="practice-areas.html#estate-planning">Estate Planning</a></li>
+            <li><a href="practice-areas.html#employment-law">Employment Law</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="attorneys.html">Our Attorneys</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Contact Information</h3>
+          <ul>
+            <li>
+              123 Legal Street, Suite 500<br>
+              New York, NY 10001
+            </li>
+            <li>Phone: (555) 123-4567</li>
+            <li>Email: info@lawfirm.com</li>
+            <li>
+              Hours: Monday - Friday: 9am - 6pm<br>
+              Saturday: By appointment
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Johnson & Associates. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
